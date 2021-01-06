@@ -1,0 +1,108 @@
+{include file='common/head'}
+<div class="page-overlay">
+    <span class="overlay-1"></span>
+    <span class="overlay-2"></span>
+</div>
+
+<div class="page-wrapper">
+
+    <!-- START: HOME -->
+    <section class="section-home " id="home" style="background-image: url('__CDN__{$information.big_image}')">
+        <div class="glass">{$information.position}</div>
+        <!-- <img src="__CDN__/static/images/banner.jpg" /> -->
+    </section>
+    <!-- END: HOME -->
+
+    <!-- START: ABOUT -->
+    <section class="section section-about" id="about">
+        <div class="container">
+            <div class="section-head">
+                <span>Get to know</span>
+                <h2>About Me</h2>
+            </div>
+
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-6">
+                    <img class="about-img img-fluid wow fadeInUp" data-wow-duration="1s" src="__CDN__{$information.small_image}" alt="About Picture">
+                </div>
+                <div class="col-md-6">
+                    <div class="about-desc wow fadeInUp" data-wow-duration="1s"  data-wow-delay="500ms">
+                        <div class="about-desc-content">
+                            <h1 class="font-weight-light mb-5">{$information.title}</h1>
+                            <p class="font-weight-light my-3">{$information.content}</p>
+                        </div>
+
+                        <div class="about-desc-more text-left mt-5">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="about-desc-info">
+                                        <b>年龄 : </b>
+                                        <span>{$information.Age}</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="about-desc-info">
+                                        <b>性别 : </b>
+                                        {if $information.gender=='male' }
+                                        <span>男</span>
+                                        {else}
+                                        <span>女</span>
+                                        {/if}
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="about-desc-info">
+                                        <b>学历 : </b>
+                                        <span>{$information.education}</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="about-desc-info">
+                                        <b>工作年限 : </b>
+                                        <span>{$information.work_years}</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="about-desc-info">
+                                        <b>期望城市 : </b>
+                                        <span>{$information.Location}</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="about-desc-info">
+                                        <b>薪资 : </b>
+                                        <span>{$information.salary}</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="about-desc-info">
+                                        <b>电话 : </b>
+                                        <span>{$information.phone}</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="about-desc-info">
+                                        <b>邮箱 : </b>
+                                        <span>{$information.email}</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="about-desc-info">
+                                        <b>联系地址 :</b>
+                                        <span>{$information.address}</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <!-- END: ABOUT -->
+
+
+ {include file='common/footer'}

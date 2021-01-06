@@ -1,0 +1,37 @@
+{include file='common/head'}
+
+<div class="page-overlay">
+    <span class="overlay-1"></span>
+    <span class="overlay-2"></span>
+</div>
+
+<div class="page-wrapper">
+
+    <!-- START: SERVICES -->
+    <section class="section section-light section-services" id="services">
+        <div class="container">
+            <div class="section-head">
+                <span>我拥有的</span>
+                <h2>职业技能</h2>
+            </div>
+
+            <div class="row mt-4">
+                {volist name='major' id='major'}
+                <div class="col-sm-6 col-lg-6">
+                    <div class="services-list b-box hover-state p-4 mt-4 wow fadeInUp" data-wow-duration="1.5s">
+                        <div class="services-list-icon">
+                            <i class="{$major.icon}" aria-hidden="true"></i>
+                            <span>{$major.id}</span>
+                        </div>
+                        <div class="mt-4">
+                            <h5 class="mb-0">{$major.title}</h5>
+                            <p class=" mt-3">{$major.des}</p>
+                        </div>
+                    </div>
+                </div>
+                {/volist}
+            </div>
+        </div>
+    </section>
+    <!-- END: SERVICES -->
+    {include file='common/footer'}

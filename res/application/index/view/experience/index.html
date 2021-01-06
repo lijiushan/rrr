@@ -1,0 +1,110 @@
+{include file='common/head'}
+<div class="page-overlay">
+    <span class="overlay-1"></span>
+    <span class="overlay-2"></span>
+</div>
+
+<div class="page-wrapper">
+
+
+    <!-- START: RESUME -->
+
+    <section class="section section-light section-resume" id="resume">
+        <div class="container">
+
+            <div class="section-head">
+                <span>我的简历</span>
+                <h2>经验总结</h2>
+            </div>
+
+            <div class="section-resume-wrap">
+                <div class="section-experience mb-5">
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <h5 class="section-subHead mb-4 "> 项目经验</h5>
+                        </div>
+
+                        <div class="col-lg-10">
+                            <div class="ExperienceList pb-3">
+                                {volist name='proexperience' id='proex'}
+                                <div class="resume-list b-box p-4">
+                                    <div class="row align-items-center">
+
+                                        <div class="col-md-12 pb-2 pb-md-0">
+                                            <h5 class="mb-3">{$proex.name}</h5>
+                                            <p>{$proex.content}</p>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                {/volist}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- END: RESUME -->
+
+    <!-- START: CTA -->
+    <section class="section section-freelance section-light text-center ">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-head wow fadeInUp" data-wow-duration="1.5s">
+                        <h2>让我们一起努力吧！</h2>
+                    </div>
+                    <div class="mt-5 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".2s">
+                        <a href="#" class="btn hover-state">选择我!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END: CTA -->
+
+    <!-- START: RESUME -->
+
+    <section class="section section-light section-resume" id="resume">
+        <div class="container">
+            <div class="section-resume-wrap">
+                <div class="section-education">
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <h5 class="section-subHead mb-4">工作经验</h5>
+                        </div>
+
+                        <div class="col-lg-10">
+                            <div class="EducationList">
+                                <div class="row">
+                                    {volist name='experience' id='exp'}
+                                    <div class="col-md-6">
+                                        <div class="resume-list b-box p-4 mb-4">
+                                            <div>
+                                                <h5>{$exp.name}</h5>
+                                                <h6 class="badge badge-light d-inline-block my-3">{$exp.long}</h6>
+                                                <p>{$exp.content}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {/volist}
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- END: RESUME -->
+
+{include file='common/footer'}
